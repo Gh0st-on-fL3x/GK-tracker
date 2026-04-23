@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Profile</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="nav-left">
+<span class="site-name">GK Tracker</span>
+</div>
+
+<div class="nav-right">
+<a href="/dashboard">Dashboard</a>
+<a href="/leaderboard">Leaderboard</a>
+</div>
+
+</nav>
+
+<h2>👤 {{ player.username }}</h2>
+
+<!-- CARTE FIFA -->
+
+<div class="fifa-card">
+
+<div class="card-header">
+<div class="rating">{{ save_pct }}</div>
+<div class="position">GK</div>
+</div>
+
+<div class="player-name">{{ player.username }}</div>
+
+<div class="stats-grid">
+
+<div><span>{{ matches }}</span><p>Matches</p></div>
+<div><span>{{ shots }}</span><p>Shots</p></div>
+<div><span>{{ goals }}</span><p>Goals</p></div>
+<div><span>{{ save_pct }}</span><p>Save %</p></div>
+
+</div>
+
+</div>
+
+</body>
+</html>

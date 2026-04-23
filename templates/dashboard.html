@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="nav-left">
+<img src="/static/images/logo.png" class="logo">
+<span class="site-name">GK Tracker</span>
+</div>
+
+<div class="nav-right">
+<a href="/dashboard">Dashboard</a>
+<a href="/add_match">Add Match</a>
+<a href="/leaderboard">Leaderboard</a>
+<a href="/logout">Logout</a>
+</div>
+
+</nav>
+
+<h2>🧤 GK Dashboard</h2>
+
+<div class="stats">
+
+<div class="stat-card">
+<h3>Matches</h3>
+<p>{{ match_count }}</p>
+</div>
+
+<div class="stat-card main">
+<h3>Save %</h3>
+<p class="big">{{ save_pct }}%</p>
+</div>
+
+<div class="stat-card">
+<h3>Shots</h3>
+<p>{{ shots }}</p>
+</div>
+
+<div class="stat-card">
+<h3>Goals</h3>
+<p>{{ goals }}</p>
+</div>
+
+<div class="stat-card">
+<h3>Clean Sheets</h3>
+<p>{{ clean_sheets }}</p>
+</div>
+
+<div class="stat-card">
+<h3>Penalty Saves</h3>
+<p>{{ pen }}</p>
+</div>
+
+<div class="stat-card">
+<h3>Clutch</h3>
+<p>{{ clutch }}</p>
+</div>
+
+</div>
+
+<h2>📊 Match History</h2>
+
+<table>
+
+<tr>
+<th>Shots</th>
+<th>Saves</th>
+<th>Goals</th>
+<th>Rating</th>
+</tr>
+
+{% for m in matches %}
+<tr>
+<td>{{ m.shots }}</td>
+<td>{{ m.saves }}</td>
+<td>{{ m.goals }}</td>
+<td>{{ m.rating }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

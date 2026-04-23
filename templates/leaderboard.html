@@ -1,0 +1,42 @@
+<head>
+<title>Leaderboard</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<nav class="navbar">
+
+<div class="site-name">GK Tracker</div>
+
+<div>
+<a href="/dashboard">Dashboard</a>
+</div>
+
+</nav>
+
+<h2>🏆 Leaderboard</h2>
+
+<table>
+
+<tr>
+<th>#</th>
+<th>Player</th>
+<th>Save %</th>
+</tr>
+
+{% for gk in data %}
+<tr>
+
+<td>{{ loop.index }}</td>
+
+<td>
+<a href="/profile/{{ gk.name }}">
+{{ gk.name }}
+</a>
+</td>
+
+<td>{{ gk.save_pct }}%</td>
+
+</tr>
+{% endfor %}
+
+</table>

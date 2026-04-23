@@ -1,0 +1,41 @@
+<head>
+<title>Add Match</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<nav class="navbar">
+<div class="site-name">GK Tracker</div>
+</nav>
+
+<h2>➕ Add Match</h2>
+
+<form method="post" class="form-card">
+
+<div class="form-row">
+<label>Shots faced</label>
+<input type="number" name="shots" required>
+</div>
+
+<div class="form-row">
+<label>Saves</label>
+<input type="number" name="saves" required>
+</div>
+
+<div class="form-row">
+<label>Goals conceded</label>
+<input type="number" name="goals" required>
+</div>
+
+<div class="form-row">
+<label>Rating /10</label>
+<input type="number" step="0.1" name="rating">
+</div>
+
+<div class="form-row">
+<label>Penalty saves</label>
+<input type="number" name="pen_saved">
+</div>
+
+<button type="submit">Save Match</button>
+
+</form>
